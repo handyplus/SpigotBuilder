@@ -10,10 +10,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up JDK 21
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'
@@ -22,7 +22,7 @@ jobs:
         run: java -jar BuildTools.jar --rev 1.21
 
       - name: Archive generated jar
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: spigot-1.21
           path: ./spigot-1.21.jar
