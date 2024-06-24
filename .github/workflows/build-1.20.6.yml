@@ -1,4 +1,4 @@
-name: Build Spigot
+name: Build Spigot 1.20.6
 
 on:
   schedule:
