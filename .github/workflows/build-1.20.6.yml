@@ -2,7 +2,7 @@ name: Build Spigot 1.20.6
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * 1'
 
 jobs:
   build:
