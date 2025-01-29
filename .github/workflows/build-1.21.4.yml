@@ -1,11 +1,6 @@
 name: Build Spigot 1.21.4
 
 on: workflow_dispatch
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: '0 0 * * 1'
 
 jobs:
   build:
