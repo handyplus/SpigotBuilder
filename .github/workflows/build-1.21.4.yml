@@ -1,6 +1,6 @@
 name: Build Spigot 1.21.4
 
-on: repository_dispatch
+on: workflow_dispatch
   push:
     branches:
       - main
