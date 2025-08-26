@@ -30,3 +30,4 @@ jobs:
         with:
           name: spigot-1.21.8
           path: ./spigot-1.21.8.jar
+          retention-days: 7
