@@ -2,7 +2,7 @@
 
 使用 github Actions 每周一早8点自动构建最新的spigot
 
-你可以在Actions里下载构建好的文件
+你可以在 Actions 里下载构建好的文件
 
 如果帮助到你，请帮忙右上角点个Star就对作者很大的支持了～
 

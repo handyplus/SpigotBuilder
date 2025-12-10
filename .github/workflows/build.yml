@@ -1,4 +1,4 @@
-name: Build Spigot 1.21.10
+name: Build Spigot 1.21.11
 
 on:
   push:
@@ -23,11 +23,11 @@ jobs:
           java-version: '21'
 
       - name: Run BuildTools
-        run: java -jar BuildTools.jar --rev 1.21.10
+        run: java -jar BuildTools.jar --rev 1.21.11
 
       - name: Archive generated jar
         uses: actions/upload-artifact@v4
         with:
-          name: spigot-1.21.10
-          path: ./spigot-1.21.10.jar
+          name: spigot-1.21.11
+          path: ./spigot-1.21.11.jar
           retention-days: 7
