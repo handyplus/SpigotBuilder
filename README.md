@@ -1,6 +1,6 @@
 ### Spigot 自动构建工具
 
-使用 github Actions 每周一早8点自动构建最新的spigot
+使用 github Actions 每天早8点自动构建最新的spigot
 
 你可以在 Actions 里下载构建好的文件
 
