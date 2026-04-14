@@ -23,11 +23,11 @@ jobs:
           java-version: '25'
 
       - name: Run BuildTools
-        run: java -jar BuildTools.jar --rev 26.1.1
+        run: java -jar BuildTools.jar --rev 26.1.2
 
       - name: Archive generated jar
         uses: actions/upload-artifact@v6
         with:
-          name: spigot-26.1.1
-          path: ./spigot-26.1.1.jar
-          retention-days: 7
+          name: spigot-26.1.2
+          path: ./spigot-26.1.2.jar
+          retention-days: 3
