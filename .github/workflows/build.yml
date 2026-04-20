@@ -7,6 +7,11 @@ on:
   schedule:
     - cron: '0 8 * * *'
   workflow_dispatch:
+    inputs:
+      rev:
+        description: 'Spigot version'
+        required: false
+        default: '26.1.2'
 
 jobs:
   build:
@@ -22,12 +27,16 @@ jobs:
           distribution: 'temurin'
           java-version: '25'
 
+      - name: Resolve build version
+        # 手动触发允许自定义版本，未填写时保持默认版本。
+        run: echo "BUILD_REV=${{ github.event.inputs.rev || '26.1.2' }}" >> "$GITHUB_ENV"
+
       - name: Run BuildTools
-        run: java -jar BuildTools.jar --rev 26.1.2
+        run: java -jar BuildTools.jar --rev "$BUILD_REV"
 
       - name: Archive generated jar
         uses: actions/upload-artifact@v6
         with:
-          name: spigot-26.1.2
-          path: ./spigot-26.1.2.jar
+          name: spigot-${{ env.BUILD_REV }}
+          path: ./spigot-${{ env.BUILD_REV }}.jar
           retention-days: 3
