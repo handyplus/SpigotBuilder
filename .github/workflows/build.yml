@@ -1,5 +1,5 @@
 name: Build Spigot
-run-name: Build Spigot ${{ github.event.inputs.rev || '26.1.2' }}
+run-name: Build Spigot ${{ github.event.inputs.rev || '26.2' }}
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
       rev:
         description: 'Spigot version'
         required: false
-        default: '26.1.2'
+        default: '26.2'
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
 
       - name: Resolve build version
         # 手动触发允许自定义版本，未填写时保持默认版本。
-        run: echo "BUILD_REV=${{ github.event.inputs.rev || '26.1.2' }}" >> "$GITHUB_ENV"
+        run: echo "BUILD_REV=${{ github.event.inputs.rev || '26.2' }}" >> "$GITHUB_ENV"
 
       - name: Run BuildTools
         run: java -jar BuildTools.jar --rev "$BUILD_REV"
